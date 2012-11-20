@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = MarkdownPreviewer::VERSION
   gem.authors       = ["moro"]
   gem.email         = ["moronatural@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Simple rack app to give your app 'Preview Markdown' functionality.}
+  gem.summary       = %q{Simple rack app to give your app 'Preview Markdown' functionality.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
