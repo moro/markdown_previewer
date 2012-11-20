@@ -1,5 +1,6 @@
 require 'redcarpet'
 require 'markdown_previewer/version'
+require 'markdown_previewer/engine'
 
 module MarkdownPreviewer
   class << self
