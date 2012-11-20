@@ -1,6 +1,6 @@
 # MarkdownPreviewer
 
-TODO: Write a gem description
+Simple rack app to give your app 'Preview Markdown' functionality.
 
 ## Installation
 
@@ -18,7 +18,35 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1st app on config/routes.rb.
+
+```
+Your::Application.routes.draw do
+  mount MarkdownPreviewer::App.new => '/md_preview', as: 'md_preview'
+end
+```
+
+2nd, include loader javascript. (or include into precompiled asset).
+
+```
+%head
+  = javascript_include_tag('markdown_previewer')
+```
+
+3rd, prepare textarea with valid data-attribute.
+
+```
+= form.text_area :body, data: {preview_url: md_preview_path, preview_target: '#preview'}
+...
+
+div#preview
+```
+
+Finally, call preview script below.
+
+```
+$('#obj_body').mdPreview()
+```
 
 ## Contributing
 
